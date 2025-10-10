@@ -6,7 +6,7 @@ import { materialResponseDtoSchema, materialsResponseDtoSchema } from './validat
 import { FromMaterialResponseDTOToMaterial, FromMaterialsResponseDTOToMaterials } from './mapper/mapper';
 import type { Paged, PagedInput } from '../common/validator';
 
-export const materialApi = {
+export const MaterialApi = {
   post: async (input: CreateMaterialRequestDTO): Promise<void> => {
     await Axios.post(`/materials`, input);
   },
