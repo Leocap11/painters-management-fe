@@ -1,3 +1,4 @@
+import { getPagedResponseDtoSchema, getResponseDtoSchema } from '@/api/common/validator';
 import z from 'zod';
 
 export const Client = z.object({
@@ -14,3 +15,6 @@ export const Client = z.object({
   telephone: z.string().nullable(),
   email: z.email().nullable(),
 });
+
+export const clientResponseDtoSchema = getResponseDtoSchema(Client);
+export const clientsResponseDtoSchema = getPagedResponseDtoSchema(z.array(Client));

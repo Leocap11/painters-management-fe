@@ -1,6 +1,6 @@
 import type { WorkOrderMaterial } from './workOrderMaterial';
 
-export interface WorkOrderResponseDTO {
+export interface WorkOrder {
   id: string;
   netWorkOrderCost: number;
   totalWorkOrderVatCost: number;
