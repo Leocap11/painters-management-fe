@@ -1,6 +1,5 @@
 import Axios from 'axios';
 import type {
-  CreateWorkOrderMaterialRequestDTO,
   CreateWorkOrderRequestDTO,
   UpdateWorkOrderRequestDTO,
   WorkOrdersRequest,
@@ -13,6 +12,7 @@ import type { Paged, PagedInput } from '../common/validator';
 import { workOrderMaterialResponseDtoSchema } from '../workOrderMaterial/validator/validator';
 import { FromWorkOrderMaterialResponseDTOToWorkOrderMaterial } from '../workOrderMaterial/mapper/mapper';
 import type { WorkOrderMaterial } from '@/models/workOrderMaterial';
+import type { CreateWorkOrderMaterialRequestDTO } from '../workOrderMaterial/dto/request';
 
 export const WorkOrderApi = {
   post: async (input: CreateWorkOrderRequestDTO): Promise<void> => {

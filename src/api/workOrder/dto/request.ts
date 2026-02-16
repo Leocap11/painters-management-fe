@@ -37,11 +37,3 @@ export const UpdateWorkOrderRequestSchema = z.object({
   status: z.enum(WorkOrderStatus).optional(),
 });
 
-export type CreateWorkOrderMaterialRequestDTO = z.infer<typeof CreateWorkOrderMaterialRequestSchema>;
-
-export const CreateWorkOrderMaterialRequestSchema = z.object({
-  workOrderId: z.string(),
-  unitPrice: z.number().positive(),
-  materialId: z.string(),
-  squareMeters: z.number().positive(),
-});

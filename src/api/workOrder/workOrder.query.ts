@@ -55,6 +55,6 @@ export const usePostWorkOrderAddMaterialMutation = () => {
 
   return useMutation({
     mutationFn: WorkOrderApi.addMaterial,
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['work-order-list', 'work-order'] }),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['work-order'] }),
   });
 };
